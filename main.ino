@@ -12,8 +12,11 @@ pinMode(13,OUTPUT);
 // the loop function runs over and over again forever
 void loop()
 {
+    static int posPosition;
+    posPosition = analogRead(A0);
     digitalWrite(13,HIGH);
-    delay(2000);
+    
+    delay(posPosition);
     digitalWrite(13,LOW);
-    delay(2000);
+    delay(posPosition);
 }
